@@ -66,7 +66,7 @@ This output gives information about:
 ### Input Image (Before Classification)
 Here is an example of an image before running the classification:
 
-![Before Classification](examples/image_before_classification.jpg)
+![Before Classification](example/image_after_classification.jpg)
 
 ---
 
