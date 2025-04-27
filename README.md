@@ -3,7 +3,7 @@
 
 ## Description
 This project is for image classification using the YOLOv5 model.  
-YOLOv5 (You Only Look Once) is one of the most popular architectures for image processing. It is fast and accurate in detecting and classifying objects in images.
+YOLOv5 is one of the most popular architectures for image processing. It is fast and accurate in detecting and classifying objects in images.
 
 ## Requirements
 - Docker installed on your computer
