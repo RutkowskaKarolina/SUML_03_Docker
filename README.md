@@ -73,4 +73,4 @@ Here is an example of an image before running the classification:
 ### Output Image (After Classification)
 And here is the result after YOLOv5 model detection:
 
-![After Classification](examples/image_after_classification.jpg)
+![After Classification](example/image_after_classification.jpg)
