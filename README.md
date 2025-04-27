@@ -39,6 +39,7 @@ You can send a POST request to the API:
 curl -X POST -H "Content-Type: application/json" -d '{"image_url": "YOUR_IMAGE_URL"}' http://localhost:5000/predict
 ```
 API Response
+
 After sending an image, the application will return a JSON response with the detected objects.
 
 Each detected object includes:
