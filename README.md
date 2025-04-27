@@ -16,6 +16,7 @@ YOLOv5 is one of the most popular architectures for image processing. It is fast
    cd SUML_03_Docker
 
 2. Option 1 — Build Locally
+
    To build the Docker image, use the following command:
 
    ```bash
@@ -26,12 +27,13 @@ YOLOv5 is one of the most popular architectures for image processing. It is fast
    docker run -p 5000:5000 yolov5s-model
 
 2. Option 2 — Pull Prebuilt Image from Docker Hub
+
    Skip building and pull the ready-to-use image:
     ```bash
     docker pull kolka222/yolov5s-model:latest
     docker run -p 5000:5000 kolka222/yolov5s-model:latest
 
-3. Open the application in your browser:
+4. Open the application in your browser:
 
   ```bash
 http://localhost:5000
