@@ -15,17 +15,23 @@ YOLOv5 (You Only Look Once) is one of the most popular architectures for image p
    git clone https://github.com/RutkowskaKarolina/SUML_03_Docker
    cd SUML_03_Docker
 
-2. Build the Docker image:
+2. Option 1 — Build Locally
    To build the Docker image, use the following command:
 
    ```bash
    docker build -t yolov5s-model .
-
-3. Run the application:
+    ```
+   Run the application:
    ```bash
    docker run -p 5000:5000 yolov5s-model
 
-4. Open the application in your browser:
+2. Option 2 — Pull Prebuilt Image from Docker Hub
+   Skip building and pull the ready-to-use image:
+    ```bash
+    docker pull kolka222/yolov5s-model:latest
+    docker run -p 5000:5000 kolka222/yolov5s-model:latest
+
+3. Open the application in your browser:
 
   ```bash
 http://localhost:5000
