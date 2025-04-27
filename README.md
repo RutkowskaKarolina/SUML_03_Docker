@@ -36,14 +36,35 @@ Once the application is up and running, you can send an image for classification
 
 You can send a POST request to the API:
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"image_url": "YOUR_IMAGE_URL"}' http://localhost:5000/predict
+curl -X POST -F 'file=@/PATH_TO_YOUR_IMAGE.jpg' http://localhost:5000/predict --output result.jpg
 ```
+- Replace /PATH_TO_YOUR_IMAGE.jpg with the path to your image.
+
 API Response
 
-After sending an image, the application will return a JSON response with the detected objects.
+It will save a new image (result.jpg) on your disk showing the detected objects with bounding boxes drawn on them.
 
-Each detected object includes:
+It will also print the classification results in the server console — e.g., you will see output like:
 
-- name: the label of the detected object (e.g., "cat", "remote", "couch"),
-- xcenter: the x-coordinate of the center of the detected object (in pixels),
-- ycenter: the y-coordinate of the center of the detected object (in pixels).
+```bash
+image 1/1 /app/uploads/your_image.jpg: 480x640 2 cats, 1 couch, 2 remotes, 933.4ms
+Speed: 12.4ms preprocess, 933.4ms inference, 22.0ms postprocess per image at shape (1, 3, 480, 640)
+```
+This output gives information about:
+
+- What objects have been detected (e.g., "2 cats", "1 couch", "2 remotes"),
+- Processing times for each image stage.
+
+  ## 📷 Example Results
+
+### Input Image (Before Classification)
+Here is an example of an image before running the classification:
+
+![Before Classification](examples/image_before_classification.jpg)
+
+---
+
+### Output Image (After Classification)
+And here is the result after YOLOv5 model detection:
+
+![After Classification](examples/image_after_classification.jpg)
